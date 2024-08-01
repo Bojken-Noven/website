@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="background-container rine-black-background">
+		<a href="{% url 'tech' %}" class="home-tech-container rine-blue-background center">
+			<p class="home-text">Tech</p>
+		</a>
+		<a href="{% url 'music' %}" class="home-music-container rine-indigo-background center">
+			<p class="home-text">Music</p>
+		</a>
+		<a href="{% url 'misc' %}" class="home-misc-container rine-purple-background center">
+			<p class="home-text">Misc</p>
+		</a>
+	</div>
+{% endblock %}
