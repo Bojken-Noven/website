@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="post-container">
+		<div class="post-title-container">
+			<p class="post-title">
+				{{ post.title }}
+			</p>
+		</div>
+		<div class="post-metadata-container">
+			<p>
+				{{ post.date }} - 
+				{% if post.category == "Technology" %}
+					<span class="home-post-text-category rine-blue">{{ post.category }}</span>
+				{% elif post.category == "Music" %}
+					<span class="home-post-text-category rine-indigo">{{ post.category }}</span>
+				{% elif post.category == "Gaming" %}
+					<span class="home-post-text-category rine-violet">{{ post.category }}</span>
+				{% endif %}
+			</p>
+		</div>
+		<div class="post-body-container">
+			<p>{{ post.body | safe }}</p>
+		</div>	
+	</div>
+{% endblock %}

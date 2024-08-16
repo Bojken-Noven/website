@@ -3,10 +3,34 @@
 <html>
 	<head>
 		<title>Rine Filp</title>
-		<link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'colors.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'post.css' %}">
+		<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" >
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<head>
 	<body>
-		{% block content %}
-		{% endblock %}
+		<div class="top-container flex-center-container">
+			<div class="logo-container">
+				<p class="logo">
+					<span class="rine-blue">R</span><span class="rine-blue-10">i</span><span class="rine-blue-20">n</span><span class="rine-blue-30">e</span>
+					<span class="rine-indigo-10">F</span><span class="rine-indigo-20">i</span><span class="rine-indigo-30">l</span><span class="rine-violet">p</span>
+				</p>
+			</div>
+			<nav class="nav-bar">
+				{% if request.path == "/" %}
+					<p class="nav-bar-item nav-bar-active-item"><a href="/">Home</a></p>
+				{% else %}
+					<p class="nav-bar-item"><a href="/">Home</a></p>
+				{% endif %}
+				<p class="nav-bar-item"><a href="{% url 'resume' %}" target="_blank">Résumé</a></p>
+				<p class="nav-bar-item"><a href="https://github.com/Bojken-Noven/website" target="_blank">Source Code</a></p>
+			</nav>
+		</div>
+		<div class="main-container flex-center-container">
+			{% block content %}
+			{% endblock %}
+		</div>
 	<body>
 <html>

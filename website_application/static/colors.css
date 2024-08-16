@@ -1,0 +1,50 @@
+/* colors */
+.rine-blue {
+    color: #88c5ff;
+}
+
+.rine-blue-10 {
+    color: #88b2ff;
+}
+
+.rine-blue-20 {
+    color: #889eff;
+}
+
+.rine-blue-30 {
+    color: #888aff;
+}
+
+.rine-indigo {
+    color: #9a88ff;
+}
+
+.rine-indigo-10 {
+    color: #ae88ff;
+}
+
+.rine-indigo-20 {
+    color: #c288ff;
+}
+
+.rine-indigo-30 {
+    color: #d588ff;
+}
+
+.rine-violet {
+    color: #e988ff;
+}
+
+
+/* background colors */
+.rine-blue-dark-background {
+    background-color: #111920;
+}
+
+.rine-indigo-dark-background {
+    background-color: #131120;
+}
+
+.rine-violet-dark-background {
+    background-color: #1d1120;
+}

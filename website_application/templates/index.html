@@ -1,15 +1,63 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div class="background-container rine-black-background">
-		<a href="{% url 'tech' %}" class="home-tech-container rine-blue-background center">
-			<p class="home-text">Tech</p>
-		</a>
-		<a href="{% url 'music' %}" class="home-music-container rine-indigo-background center">
-			<p class="home-text">Music</p>
-		</a>
-		<a href="{% url 'misc' %}" class="home-misc-container rine-purple-background center">
-			<p class="home-text">Misc</p>
-		</a>
+	<ul class="home-side-container home-left-container rine-indigo-dark-background">
+		{% for video in videos %}
+			<li>
+				<iframe class="home-left-video-container" src="https://www.youtube.com/embed/{{ video.video_id }}" frameBorder="0"></iframe>
+			</li>
+		{% endfor %}
+	</ul>
+	<ul class="home-posts-container">
+		<li class="home-posts-heading-container">
+			<p class="home-posts-heading">
+				Latest Posts
+			</p>
+		</li>
+		{% for post in posts %}
+			<li class="home-post-container {% if post.category == 'Technology' %}rine-blue-dark-background{% elif post.category == 'Music' %}rine-indigo-dark-background{% elif post.category == 'Gaming' %}rine-violet-dark-background{% endif %}">
+				<div class="home-post-image-container">
+					<a href="{% url 'post' post.pk %}">
+						<img class="home-post-image" src="{{ post.image.url }}"/>
+					</a>
+				</div>
+				<div class="home-post-text-container">
+					<div class="home-post-text-title-container">
+						<a href="{% url 'post' post.pk %}">
+							<p class="home-post-text-title">
+								{{ post.title }}
+							</p>
+						</a>
+					</div>
+					<div class="home-post-text-metadata-container">
+						<p>
+							{{ post.date }} - 
+							{% if post.category == "Technology" %}
+								<span class="home-post-text-category rine-blue">{{ post.category }}</span>
+							{% elif post.category == "Music" %}
+								<span class="home-post-text-category rine-indigo">{{ post.category }}</span>
+							{% elif post.category == "Gaming" %}
+								<span class="home-post-text-category rine-violet">{{ post.category }}</span>
+							{% endif %}
+						</p>
+					</div>
+					<div class="home-post-text-excerpt-container">
+						{{ post.body | safe | truncatewords:32}}
+					</div>
+					<div class="home-post-text-read-more-container">
+						<p class="home-post-text-read-more">
+							<a href="{% url 'post' post.pk %}">
+								READ MORE »
+							</a>
+						</p>
+					</div>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+	<div class="home-side-container home-right-container rine-indigo-dark-background">
+		<div class="home-right-child-container">
+			{{ right_side_bar_content.body | safe}}
+		</div>
 	</div>
 {% endblock %}
