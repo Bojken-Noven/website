@@ -71,12 +71,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SUMMERNOTE_CONFIG = {
+    'summernote': {
+        'width': '1100px',
+        'height': '1100px',
+        'fontSizes': ['18'],
+    },
+    
+}
+
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
 STATIC_URL = 'static/'

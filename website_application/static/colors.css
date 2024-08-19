@@ -1,50 +1,79 @@
+:root {
+    --rine-light-red:       hsl(0,   100%, 80%);
+    --rine-light-orange:    hsl(30,  100%, 80%);
+    --rine-light-yellow:    hsl(60,  100%, 80%);
+    --rine-light-green:     hsl(120, 100%, 80%);
+    --rine-light-cyan:      hsl(180, 100%, 80%);
+    --rine-light-blue:      hsl(240, 100%, 80%);
+    --rine-light-blue-p10:  hsl(250, 100%, 80%);
+    --rine-light-blue-p20:  hsl(260, 100%, 80%);
+    --rine-light-purple:    hsl(270, 100%, 80%);
+    --rine-light-purple-p10:hsl(280, 100%, 80%);
+    --rine-light-purple-p20:hsl(290, 100%, 80%);
+    --rine-light-magenta:   hsl(300, 100%, 80%);
+
+    --rine-medium-red:      hsl(0,   25%, 50%);
+    --rine-medium-orange:   hsl(30,  25%, 50%);
+    --rine-medium-yellow:   hsl(60,  25%, 50%);
+    --rine-medium-green:    hsl(120, 25%, 50%);
+    --rine-medium-cyan:     hsl(180, 25%, 50%);
+    --rine-medium-blue:     hsl(240, 25%, 50%);
+    --rine-medium-purple:   hsl(270, 25%, 50%);
+    --rine-medium-magenta:  hsl(300, 25%, 50%);
+
+    --rine-dark-red:        hsl(0,   25%, 10%);
+    --rine-dark-orange:     hsl(30,  25%, 10%);
+    --rine-dark-yellow:     hsl(60,  25%, 10%);
+    --rine-dark-green:      hsl(120, 25%, 10%);
+    --rine-dark-cyan:       hsl(180, 25%, 10%);
+    --rine-dark-blue:       hsl(240, 25%, 10%);
+    --rine-dark-purple:     hsl(270, 25%, 10%);
+    --rine-dark-magenta:    hsl(300, 25%, 10%);
+}
+
+
 /* colors */
-.rine-blue {
-    color: #88c5ff;
+.rine-light-red {
+    color: var(--rine-light-red);
 }
 
-.rine-blue-10 {
-    color: #88b2ff;
+.rine-light-blue {
+    color: var( --rine-light-blue);
 }
 
-.rine-blue-20 {
-    color: #889eff;
+.rine-light-blue-p10 {
+    color: var( --rine-light-blue-p10);
 }
 
-.rine-blue-30 {
-    color: #888aff;
+.rine-light-blue-p20 {
+    color: var( --rine-light-blue-p20);
 }
 
-.rine-indigo {
-    color: #9a88ff;
+.rine-light-purple {
+    color: var(--rine-light-purple);
 }
 
-.rine-indigo-10 {
-    color: #ae88ff;
+.rine-light-purple-p10 {
+    color: var(--rine-light-purple-p10);
 }
 
-.rine-indigo-20 {
-    color: #c288ff;
+.rine-light-purple-p20 {
+    color: var(--rine-light-purple-p20);
 }
 
-.rine-indigo-30 {
-    color: #d588ff;
+.rine-light-magenta {
+    color: var(--rine-light-magenta);
 }
-
-.rine-violet {
-    color: #e988ff;
-}
-
 
 /* background colors */
-.rine-blue-dark-background {
-    background-color: #111920;
+.rine-dark-blue-background {
+    background-color: var(--rine-dark-blue);
 }
 
-.rine-indigo-dark-background {
-    background-color: #131120;
+.rine-dark-purple-background {
+    background-color: var(--rine-dark-purple);
 }
 
-.rine-violet-dark-background {
-    background-color: #1d1120;
+.rine-dark-magenta-background {
+    background-color: var(--rine-dark-magenta);
 }

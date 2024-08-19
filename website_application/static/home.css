@@ -6,25 +6,26 @@
     padding-right: 1%;
     padding-top: 1%;
     position: fixed;
-    scrollbar-color: #9a88ff #000;
     scrollbar-width: thin;
     top: 0;
     width: 20%;
 }
 
 .home-left-container {
+    background-image: linear-gradient(var(--rine-dark-blue), var(--rine-dark-magenta));
     left: 0;
+    scrollbar-color: var(--rine-medium-purple) black;
 }
 
 .home-left-video-container {
-    border-radius: 0.75rem;
-    height: 25vh;
     margin-bottom: 4%;
-    width: 100%;
 }
 
 .home-right-container {
+    background-image: linear-gradient(var(--rine-dark-blue), var(--rine-dark-magenta));
     direction: rtl;
+    padding-bottom: 1%;
+    scrollbar-color: var(--rine-medium-purple) black;
     right: 0;
 }
 
