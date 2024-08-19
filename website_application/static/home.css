@@ -1,3 +1,4 @@
+/* PC */
 .home-side-container {
     bottom: 0;
     margin-top: 4rem;
@@ -93,7 +94,103 @@
     margin-bottom: 2.5rem;
 }
 
-.home-post-text-read-more-container {
+.home-post-text-read-more {
     bottom: 0;
     position: absolute;
+}
+
+/* mobile */
+.mobile-home-posts-container {
+    width: 90%;
+}
+
+.mobile-home-posts-heading-container {
+    margin-bottom: 2rem;
+}
+
+.mobile-home-posts-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.mobile-home-post-container {
+    border-radius: 0.75rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem black;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.mobile-home-post-image-container {
+    width: 100%;
+}
+
+.mobile-home-post-image {
+    border-radius: 0.75rem 0.75rem 0rem 0rem;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.mobile-home-post-text-container {
+    margin: 2rem;
+    position: relative;
+}
+
+.mobile-home-post-text-read-more {
+    font-size: 2rem;
+}
+
+.mobile-sidebar-button {
+    border: solid;
+    min-height: 6%;
+    opacity: 0.75;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6.5%;
+}
+
+.mobile-left-sidebar-button-open {
+    background-color: var(--rine-light-blue);
+    border-radius: 0rem 4rem 4rem 0rem;
+    left: 0;
+}
+
+.mobile-left-sidebar-button-close {
+    background-color: var(--rine-light-blue);
+    border-radius: 4rem 0rem 0rem 4rem;
+    display: none;
+    right: 0;
+}
+
+.mobile-right-sidebar-button-open {
+    background-color: var(--rine-light-magenta);
+    border-radius: 4rem 0rem 0rem 4rem;
+    right: 0;
+}
+
+.mobile-right-sidebar-button-close {
+    background-color: var(--rine-light-magenta);
+    border-radius: 0rem 4rem 4rem 0rem;
+    display: none;
+    left: 0;
+}
+
+.mobile-home-sidebar-button-text {
+    color: #111;
+    font-size: 1.5rem;
+}
+
+.mobile-home-left-sidebar-container {
+    display: none;
+    margin-top: 1%;
+    width: 90%;
+}
+
+.mobile-home-right-sidebar-container {
+    display: none;
+    margin-bottom: 3rem;
+    width: 90%;
 }

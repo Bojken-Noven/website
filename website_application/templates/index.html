@@ -16,27 +16,21 @@
 					<a href="{% url 'post' post.pk %}"><img class="home-post-image" src="{{ post.image.url }}"/></a>
 				</div>
 				<div class="home-post-text-container">
-					<div class="home-post-text-title-container">
-						<p class="home-post-text-title"><a href="{% url 'post' post.pk %}">{{ post.title }}</a></p>
-					</div>
-					<div class="home-post-text-metadata-container">
-						<p>
-							{{ post.date }} - 
-							{% if post.category == "Technology" %}
-								<span class="home-post-text-category rine-light-blue">{{ post.category }}</span>
-							{% elif post.category == "Music" %}
-								<span class="home-post-text-category rine-light-purple">{{ post.category }}</span>
-							{% elif post.category == "Gaming" %}
-								<span class="home-post-text-category rine-light-magenta">{{ post.category }}</span>
-							{% endif %}
-						</p>
-					</div>
+					<p class="home-post-text-title"><a href="{% url 'post' post.pk %}">{{ post.title }}</a></p>
+					<p><br/>
+						{{ post.date }} - 
+						{% if post.category == "Technology" %}
+							<span class="home-post-text-category rine-light-blue">{{ post.category }}</span>
+						{% elif post.category == "Music" %}
+							<span class="home-post-text-category rine-light-purple">{{ post.category }}</span>
+						{% elif post.category == "Gaming" %}
+							<span class="home-post-text-category rine-light-magenta">{{ post.category }}</span>
+						{% endif %}
+					</p>
 					<div class="home-post-text-excerpt-container">
-						{{ post.body | safe | truncatewords:32}}
-					</div>
-					<div class="home-post-text-read-more-container">
-						<p class="home-post-text-read-more"><a href="{% url 'post' post.pk %}">READ MORE »</a></p>
-					</div>
+						<br/>{{ post.body | safe | truncatewords:32}}
+					</div>		
+					<p class="home-post-text-read-more"><a href="{% url 'post' post.pk %}">READ MORE »</a></p>
 				</div>
 			</li>
 		{% endfor %}

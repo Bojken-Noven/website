@@ -16,6 +16,7 @@ a:hover {
 
 body {
     background-color: #111;
+    text-size-adjust: 215%;
 }
 
 html {
@@ -25,6 +26,7 @@ html {
 iframe {
     aspect-ratio: 16 / 9;
     border-radius: 0.75rem;
+    font-size: 1.125rem;
 	height: 100%;
 	width: 100%;
 }
@@ -44,12 +46,13 @@ span {
 }
 
 ul {
-    color: white;
+    color: #eee;
     list-style-type: none;
 }
 
 
 /* base */
+/* PC */
 .flex-center-container {
     align-items: center;
     display: flex;
@@ -91,7 +94,6 @@ ul {
 }
 
 .nav-bar-item {
-    color: white;
     font-size: 1.5rem;
 }
 
@@ -104,12 +106,65 @@ ul {
     margin-right: 1%;
 }
 
-.top-right-text {
-    font-size: 1.5rem;
+.main-container {
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+    flex-direction: column;
 }
 
-.main-container {
-    margin-bottom: 4rem;
-    margin-top: 4rem;
+/* mobile */
+.mobile-bottom-container {
+    background-color: black;
+    min-height: 6rem;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 2;
+}
+
+.mobile-bottom-corner-container {
+    align-items: center;
+    display: flex;
+    min-height: 6rem;
+    position: fixed;
+    bottom: 0;
+}
+
+.mobile-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-size-adjust: none;
+}
+
+.mobile-bottom-left-container {
+    left: 0;
+    margin-left: 5%;
+}
+
+.mobile-nav-bar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 4rem;
+    place-items: center;
+}
+
+.mobile-nav-bar-item {
+    font-size: 2rem;
+    text-size-adjust: none;
+}
+
+.mobile-bottom-right-container {
+    right: 0;
+    margin-right: 5%;
+}
+
+.mobile-bottom-right-text {
+    font-size: 1.5rem;
+    text-size-adjust: none;
+}
+
+.mobile-main-container {
+    margin-bottom: 6rem;
+    margin-top: 2rem;
     flex-direction: column;
 }

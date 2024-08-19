@@ -1,3 +1,4 @@
+/* variables */
 :root {
     --rine-light-red:       hsl(0,   100%, 80%);
     --rine-light-orange:    hsl(30,  100%, 80%);
@@ -31,8 +32,7 @@
     --rine-dark-magenta:    hsl(300, 25%, 10%);
 }
 
-
-/* colors */
+/* foreground */
 .rine-light-red {
     color: var(--rine-light-red);
 }
@@ -65,7 +65,7 @@
     color: var(--rine-light-magenta);
 }
 
-/* background colors */
+/* background */
 .rine-dark-blue-background {
     background-color: var(--rine-dark-blue);
 }

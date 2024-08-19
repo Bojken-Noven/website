@@ -1,0 +1,51 @@
+{% extends "base_mobile.html" %}
+
+{% block content %}
+	<ul id="leftSidebar" class="mobile-home-left-sidebar-container">
+		{% for video in videos %}
+			<li><iframe class="home-left-video-container" src="https://www.youtube.com/embed/{{ video.video_id }}" frameBorder="0"></iframe></li>
+		{% endfor %}
+	</ul>
+	<button id="leftSidebarButtonOpen" class="mobile-sidebar-button mobile-left-sidebar-button-open" type="button" onclick="openLeft()">
+		<p class="mobile-home-sidebar-button-text">&#10095</p>
+	</button>
+	<button id="rightSidebarButtonClose" class="mobile-sidebar-button mobile-right-sidebar-button-close" type="button" onclick="closeRight()">
+		<p class="mobile-home-sidebar-button-text">&#10095</p>
+	</button>
+	<ul id="postsContainer" class="mobile-home-posts-container">
+		<li class="mobile-home-posts-heading-container">
+			<p class="mobile-home-posts-heading">Latest Posts</p>
+		</li>
+		{% for post in posts %}
+			<li class="mobile-home-post-container {% if post.category == 'Technology' %}rine-dark-blue-background{% elif post.category == 'Music' %}rine-dark-purple-background{% elif post.category == 'Gaming' %}rine-dark-magenta-background{% endif %}">
+				<div class="mobile-home-post-image-container">
+					<a href="{% url 'post' post.pk %}"><img class="mobile-home-post-image" src="{{ post.image.url }}"/></a>
+				</div>
+				<div class="mobile-home-post-text-container">
+					<p class="home-post-text-title"><a href="{% url 'post' post.pk %}">{{ post.title }}</a></p>
+					<p><br/>
+						{{ post.date }} - 
+						{% if post.category == "Technology" %}
+							<span class="home-post-text-category rine-light-blue">{{ post.category }}</span><br/><br/>
+						{% elif post.category == "Music" %}
+							<span class="home-post-text-category rine-light-purple">{{ post.category }}</span><br/><br/>
+						{% elif post.category == "Gaming" %}
+							<span class="home-post-text-category rine-light-magenta">{{ post.category }}</span><br/><br/>
+						{% endif %}
+					</p>
+					{{ post.body | safe | truncatewords:32}}<br/><br/>
+					<a href="{% url 'post' post.pk %}">READ MORE »</a>
+				</div>
+			</li>
+		{% endfor %}
+	</ul>
+	<div id="rightSidebar" class="mobile-home-right-sidebar-container">
+		{{ right_side_bar_content.body | safe}}
+	</div>
+	<button id="leftSidebarButtonClose" class="mobile-sidebar-button mobile-left-sidebar-button-close" type="button" onclick="closeLeft()">
+		<p class="mobile-home-sidebar-button-text">&#10094</p>
+	</button>
+	<button id="rightSidebarButtonOpen" class="mobile-sidebar-button mobile-right-sidebar-button-open" type="button" onclick="openRight()">
+		<p class="mobile-home-sidebar-button-text">&#10094</p>
+	</button>
+{% endblock %}

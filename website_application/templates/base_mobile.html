@@ -9,35 +9,35 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'post.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
 		<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" >
-		<script src="/static/main.js" type="text/javascript"></script>
+		<script src="{% static 'main.js' %}" type="text/javascript"></script>
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<head>
 	<body>
-		<div class="top-container flex-center-container">
-			<div class="top-corner-container top-left-container">
-				<p class="logo">
+		<div class="mobile-bottom-container flex-center-container">
+			<div class="mobile-bottom-corner-container mobile-bottom-left-container">
+				<p class="mobile-logo">
 					<span class="rine-light-blue">R</span><span class="rine-light-blue-p10">i</span><span class="rine-light-blue-p20">n</span><span class="rine-light-purple">e</span>
 					<span class="rine-light-purple">F</span><span class="rine-light-purple-p10">i</span><span class="rine-light-purple-p20">l</span><span class="rine-light-magenta">p</span>
 				</p>
 			</div>
-			<nav class="nav-bar">
+			<nav class="mobile-nav-bar">
 				{% if request.path == "/" %}
-					<p class="nav-bar-item nav-bar-active-item"><a href="/">Home</a></p>
+					<p class="mobile-nav-bar-item nav-bar-active-item"><a href="/">Home</a></p>
 				{% else %}
-					<p class="nav-bar-item"><a href="/">Home</a></p>
+					<p class="mobile-nav-bar-item"><a href="/">Home</a></p>
 				{% endif %}
-				<p class="nav-bar-item"><a href="{% url 'resume' %}" target="_blank">Resume</a></p>
-				<p class="nav-bar-item"><a href="https://github.com/Bojken-Noven/website" target="_blank">Source Code</a></p>
+				<p class="mobile-nav-bar-item"><a href="{% url 'resume' %}" target="_blank">Resume</a></p>
+				<p class="mobile-nav-bar-item"><a href="https://github.com/Bojken-Noven/website" target="_blank">Source Code</a></p>
 			</nav>
-			<div class="top-corner-container top-right-container">
+			<div class="mobile-bottom-corner-container mobile-bottom-right-container">
 				{% if not user.is_authenticated %}
-					<p class="nav-bar-item"><a href="{% url 'login' %}" target="_blank">Admin</a></p>
+					<p class="mobile-bottom-right-text"><a href="{% url 'login' %}">Admin</a></p>
 				{% else %}
-					<p class="nav-bar-item"><a href="{% url 'admin:index' %}">Admin</a></p>
+					<p class="mobile-bottom-right-text"><a href="{% url 'admin:index' %}">Admin</a></p>
 				{% endif %}
 			</div>
 		</div>
-		<div class="main-container flex-center-container">
+		<div class="mobile-main-container flex-center-container">
 			{% block content %}
 			{% endblock %}
 		</div>

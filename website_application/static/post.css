@@ -1,10 +1,7 @@
+/* PC */
 .post-container {
     margin-top: 2rem;
     width: 30%;
-}
-
-.post-title-container {
-    margin-bottom: 0.3rem;
 }
 
 .post-title {
@@ -19,4 +16,10 @@
 .post-image {
     border-radius: 1rem;
     width: 100%;
+}
+
+/* mobile */
+.mobile-post-container {
+    margin-bottom: 2rem;
+    width: 90%;
 }
