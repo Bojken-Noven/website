@@ -32,6 +32,7 @@ class Video(models.Model):
 	title = models.CharField(max_length=255)
 	date = models.DateField()
 	video_id = models.CharField(max_length=255)
+	order = models.IntegerField()
 
 	def __str__(self):
 		return self.title + " | " + str(self.date)

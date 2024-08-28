@@ -1,123 +1,108 @@
-/* PC */
-.login-container {
-    border-radius: 0.75rem;
-    box-shadow: 0.5rem 0.5rem 0.5rem black;
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    margin-top: 4rem;
-}
-
-.login-title-container {
-    background-color: black;
-    border-radius: 0.75rem 0.75rem 0rem 0rem;
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
-    text-align: center;
-}
-
-.login-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.login-form-container {
-    background-color: var(--rine-dark-blue);
-    border-radius: 0rem 0rem 0.75rem 0.75rem;
-    text-align: center;
-    padding: 2rem;
-}
-
-.login-form-username {
-    font-size: 1.125rem;
-    height: 1.8rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.2rem;
-    padding-top: 0.2rem;
-    width: 20rem;
-}
-
-.login-form-password {
-    font-size: 1.125rem;
-    height: 1.8rem;
-    margin-bottom: 1.8rem;
-    padding-bottom: 0.2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.2rem;
-    padding-top: 0.2rem;
-    width: 20rem;
-}
-
-.login-form-submit-button {
-    background-color: black;
-    border: none;
-    border-radius: 0.75rem;
-    color: #eee;
-    cursor: pointer;
-    font-size: 1.125rem;
-    font-weight: bold;
-    padding: 0.75rem;
-}
-
-.error-container {
-    margin-top: 1rem;
-    max-width: 100%;
-}
-
-/* mobile */
-.mobile-login-container {
-    border-radius: 0.75rem;
-    box-shadow: 0.5rem 0.5rem 0.5rem black;
-    display: flex;
-    flex-direction: column;
+.mobile-login-wrapper {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    width: 90%;
+    width: 90vw;
+}
+
+.login-container, .mobile-login-container {
+    border-radius: 0.75rem;
+    box-shadow: var(--rine-shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container {
+    max-width: 92%;
+    min-width: 25%;
+    margin-top: 4vw;
+}
+
+.login-title-container, .mobile-login-title-container {
+    background-color: black;
+    border-radius: 0.75rem 0.75rem 0rem 0rem;
+    text-align: center;
+}
+
+.login-title-container {
+    padding: 1.5rem;
+}
+
+.mobile-login-title-container {
+    padding: 3vw;
+}
+
+.login-form-container, .mobile-login-form-container {
+    background-color: var(--rine-dark-blue);
+    border-radius: 0rem 0rem 0.75rem 0.75rem;
+    text-align: center;
+}
+
+.login-form-container {
+    padding: 2rem;
+}
+
+.mobile-login-form-container {
+    padding: 5vw;
+}
+
+.login-form-username, .login-form-password, .mobile-login-form-username, .mobile-login-form-password {
+    font-size: inherit;
+    width: 80%;
+}
+
+.login-form-username, .login-form-password {
+    height: 2.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.2rem;
+}
+
+.login-form-username {
+    margin-bottom: 1.5rem;
+}
+
+.login-form-password {
+    margin-bottom: 2rem;
+}
+
+.mobile-login-form-username, .mobile-login-form-password {
+    height: 8vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
 }
 
 .mobile-login-form-username {
-    font-size: 1.125rem;
-    height: 3rem;
-    margin-bottom: 1.8rem;
-    padding-bottom: 0.2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.2rem;
-    padding-top: 0.2rem;
-    width: 50%;
+    margin-bottom: 3vw;
 }
 
 .mobile-login-form-password {
-    font-size: 1.125rem;
-    height: 3rem;
-    margin-bottom: 1.8rem;
-    padding-bottom: 0.2rem;
-    padding-left: 0.5rem;
-    padding-right: 0.2rem;
-    padding-top: 0.2rem;
-    width: 50%;
+    margin-bottom: 5vw;
 }
 
-.mobile-login-form-submit-button {
+.login-form-submit-button, .mobile-login-form-submit-button {
     background-color: black;
     border: none;
     border-radius: 0.75rem;
-    color: #eee;
+    color: var(--rine-white);
     cursor: pointer;
-    font-size: 2.15rem;
     font-weight: bold;
     padding: 0.75rem;
-    text-size-adjust: none;
+}
+
+.login-form-submit-button, .mobile-login-form-submit-button {
+    font-size: inherit;
+}
+
+.error-container, .mobile-error-container {
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.error-container {
+    max-width: 92%;
+    min-width: 25%;
 }
 
 .mobile-error-container {
-    margin-top: 1rem;
-    max-width: 100%;
-}
-
-.mobile-error {
-    font-size: 2.15rem;
-    text-size-adjust: none;
+    width: 90vw;
 }

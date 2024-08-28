@@ -30,6 +30,9 @@
     --rine-dark-blue:       hsl(240, 25%, 10%);
     --rine-dark-purple:     hsl(270, 25%, 10%);
     --rine-dark-magenta:    hsl(300, 25%, 10%);
+
+    --rine-white:           #eee;
+    --rine-shadow:          0.5rem 0.5rem 0.5rem black;
 }
 
 /* foreground */

@@ -2,16 +2,17 @@
 
 {% block content %}
 	<div class="post-container">
-		<p class="post-title">{{ post.title }}</p>
-		<p><br/>
+		<h2>{{ post.title }}</h2>
+		<p><br>
 			{{ post.date }} - 
 			{% if post.category == "Technology" %}
-				<span class="home-post-text-category rine-light-blue">{{ post.category }}</span><br/><br/>
+				<span class="post-text-category rine-light-blue">{{ post.category }}</span>
 			{% elif post.category == "Music" %}
-				<span class="home-post-text-category rine-light-purple">{{ post.category }}</span><br/><br/>
+				<span class="post-text-category rine-light-purple">{{ post.category }}</span>
 			{% elif post.category == "Gaming" %}
-				<span class="home-post-text-category rine-light-magenta">{{ post.category }}</span><br/><br/>
+				<span class="post-text-category rine-light-magenta">{{ post.category }}</span>
 			{% endif %}
+			<br><br>
 		</p>
 		<p>{{ post.body | safe }}</p>
 	</div>

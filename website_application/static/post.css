@@ -1,25 +1,15 @@
-/* PC */
 .post-container {
-    margin-top: 2rem;
+    padding-top: 4vw;
     width: 30%;
 }
 
-.post-title {
-    font-size: 1.5rem;
+.mobile-post-container {
+    padding-bottom: 5vw;
+    padding-top: 4vw;
+    width: 90vw;
+}
+
+.post-text-category {
     font-weight: bold;
 }
 
-.post-metadata-container {
-    margin-bottom: 1rem;
-}
-
-.post-image {
-    border-radius: 1rem;
-    width: 100%;
-}
-
-/* mobile */
-.mobile-post-container {
-    margin-bottom: 2rem;
-    width: 90%;
-}
