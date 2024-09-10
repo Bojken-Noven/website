@@ -8,6 +8,12 @@ from django.contrib.auth import authenticate, login, logout
 from django import forms
 
 
+def render_check_pc(request, template_name, context=None):
+	if request.user_agent.is_pc:
+		return render(request, template_name+".html", context)
+	else:
+		return render(request, template_name+"_mobile.html", context)
+	
 def get_home_view(request):
 	videos = Video.objects.all().order_by("order")[::-1]
 	posts = Post.objects.all()
@@ -17,22 +23,14 @@ def get_home_view(request):
 		"posts": posts, 
 		"right_side_bar_content": right_side_bar_content
 	}
-
-	if not request.user_agent.is_mobile:
-		return render(request, "index.html", context)
-	else:
-		return render(request, "index_mobile.html", context)
+	return render_check_pc(request, "index", context)
 		
-
 def get_post_view(request, pk):
 	post = Post.objects.get(pk=pk)
 	context = {
 		"post": post
 	}
-	if not request.user_agent.is_mobile:
-		return render(request, "post.html", context)
-	else:
-		return render(request, "post_mobile.html", context)
+	return render_check_pc(request, "post", context)
 
 def open_resume(request):
 	file_path = "/" + Resume.objects.latest("date").pdf.name
@@ -51,26 +49,24 @@ def get_login_view(request):
 				return redirect("admin:index")
 			else:
 				error = "Incorrect login credentials."
-				if not request.user_agent.is_mobile:
+				if request.user_agent.is_pc:
 					form = LoginForm()
 				else:
-					form = MobileLoginForm()
+					form = MobileLoginForm()				
 	else:
-		if not request.user_agent.is_mobile:
+		if request.user_agent.is_pc:
 			form = LoginForm()
 		else:
-			form = MobileLoginForm()
-
+			form = MobileLoginForm()		
 	context = {
 		"form": form,
 		"error": error
 	}
-
-	if not request.user_agent.is_mobile:
-		return render(request, "login.html", context)
-	else:
-		return render(request, "login_mobile.html", context)
-
+	return render_check_pc(request, "login", context)
+		
 def get_logout_view(request):
 	logout(request)
 	return redirect("index")
+
+def get_404_view(request):
+	return render_check_pc(request, "404")

@@ -2,16 +2,16 @@
 
 {% block content %}
 	<div class="index-side-container index-left-container">
-		<ul class="index-side-container index-left-container">
+		<ul class="index-left-videos-container">
 			{% for video in videos %}
-				<li class="index-left-video-container"><iframe src="https://www.youtube.com/embed/{{ video.video_id }}" frameBorder="0"></iframe></li>
+				<li class="index-left-video-container"><iframe src="https://www.youtube-nocookie.com/embed/{{ video.video_id }}" frameBorder="0"></iframe></li>
 			{% endfor %}
 		</ul>
 	</div>
 	<div class="index-center-container flex-center-container">
 		<ul class="index-posts-container">
 			<li class="index-posts-heading-container">
-				<h1 class="index-posts-heading">Latest Posts</h1>
+				<h1>Latest Posts</h1>
 			</li>
 			{% for post in posts %}
 				<li class="index-post-container {% if post.category == 'Technology' %}rine-dark-blue-background{% elif post.category == 'Music' %}rine-dark-purple-background{% elif post.category == 'Gaming' %}rine-dark-magenta-background{% endif %}">

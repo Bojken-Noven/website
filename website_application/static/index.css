@@ -1,10 +1,10 @@
+/* side containers */
 .index-side-container {
     bottom: 0;
     margin-top: 4rem;
     overflow-y: scroll;
     padding-left: 1vw;
     padding-right: 1vw;
-    padding-top: 1vw;
     position: fixed;
     scrollbar-width: thin;
     top: 0;
@@ -20,9 +20,14 @@
     left: 0;
 }
 
+.index-left-videos-container {
+    padding-top: 1vw;
+}
+
 .index-right-container {
     direction: rtl;
     padding-bottom: 1vw;
+    padding-top: 1vw;
     right: 0;
 }
 
@@ -35,10 +40,11 @@
     direction: ltr;
 }
 
+/* side buttons */
 .mobile-sidebar-button {
     border: none;
-    min-height: 15vw;
-    opacity: 0.75;
+    height: 4rem;
+    opacity: 0.80;
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -50,12 +56,12 @@
 }
 
 .mobile-left-sidebar-button-open, .mobile-right-sidebar-button-close {
-    border-radius: 0rem 4rem 4rem 0rem;
+    border-radius: 0vh 2rem 2rem 0vh;
     left: 0;
 }
 
 .mobile-left-sidebar-button-close, .mobile-right-sidebar-button-open {
-    border-radius: 4rem 0rem 0rem 4rem;
+    border-radius: 2rem 0vh 0vh 2rem;
     right: 0;
 }
 
@@ -69,13 +75,17 @@
 
 .mobile-index-sidebar-button-text {
     color: black;
-    font-size: 1.5rem;
+    font-size: 1.125rem;
+}
+
+/* side container children */
+.mobile-index-left-sidebar-container, .mobile-index-right-sidebar-container {
+    display: none;
+    width: 90vw;
 }
 
 .mobile-index-left-sidebar-container {
-    display: none;
     padding-top: 5vw;
-    width: 90vw;
 }
 
 .mobile-index-left-video-container {
@@ -84,26 +94,20 @@
 }
 
 .mobile-index-right-sidebar-container {
-    display: none;
     padding-bottom: 5vw;
-    padding-top: 4vw;
-    width: 90vw;
-}
-
-.mobile-index-left-sidebar-container {
-    display: none;
     padding-top: 5vw;
-    width: 90vw;
 }
 
+/* center container */
 .index-center-container {
     width: 56%;
 }
 
+/* posts container */
 .index-posts-container {
     padding-left: 4vw;
     padding-right: 4vw;
-    padding-top: 3vw;
+    padding-top: 4vw;
 }
 
 .mobile-index-posts-container {
@@ -111,16 +115,13 @@
     width: 90vw;
 }
 
+/* posts container children */
 .index-posts-heading-container {
-    padding-bottom: 1vw;
+    padding-bottom: 0.5vw;
 }
 
 .mobile-index-posts-heading-container {
     padding-bottom: 2vw;
-}
-
-.index-posts-heading, .mobile-index-posts-heading {
-    line-height: 1;
 }
 
 .index-post-container, .mobile-index-post-container {

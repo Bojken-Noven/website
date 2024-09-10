@@ -1,10 +1,4 @@
-.mobile-login-wrapper {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 90vw;
-}
-
+/* login container */
 .login-container, .mobile-login-container {
     border-radius: 0.75rem;
     box-shadow: var(--rine-shadow);
@@ -13,11 +7,18 @@
 }
 
 .login-container {
+    max-height: 50%;
     max-width: 92%;
     min-width: 25%;
-    margin-top: 4vw;
+    margin-top: 3vw;
 }
 
+.mobile-login-container {
+    margin-top: 5vw;
+    min-width: 90vw;
+}
+
+/* login container children */
 .login-title-container, .mobile-login-title-container {
     background-color: black;
     border-radius: 0.75rem 0.75rem 0rem 0rem;
@@ -38,6 +39,7 @@
     text-align: center;
 }
 
+/* login form container */
 .login-form-container {
     padding: 2rem;
 }
@@ -46,6 +48,7 @@
     padding: 5vw;
 }
 
+/* login form container children */
 .login-form-username, .login-form-password, .mobile-login-form-username, .mobile-login-form-password {
     font-size: inherit;
     width: 80%;
@@ -79,6 +82,7 @@
     margin-bottom: 5vw;
 }
 
+/* submit button */
 .login-form-submit-button, .mobile-login-form-submit-button {
     background-color: black;
     border: none;
@@ -93,6 +97,7 @@
     font-size: inherit;
 }
 
+/* error container */
 .error-container, .mobile-error-container {
     padding-top: 1rem;
     text-align: center;
@@ -104,5 +109,6 @@
 }
 
 .mobile-error-container {
+    padding-bottom: 1rem;
     width: 90vw;
 }
