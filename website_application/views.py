@@ -15,7 +15,7 @@ def render_check_pc(request, template_name, context=None):
 		return render(request, template_name+"_mobile.html", context)
 	
 def get_home_view(request):
-	videos = Video.objects.all().order_by("order")[::-1]
+	videos = Video.objects.all().order_by("order")
 	posts = Post.objects.all()
 	right_side_bar_content = RightSideBarContent.objects.latest("date")
 	context = {
