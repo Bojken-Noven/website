@@ -1,0 +1,82 @@
+/* variables */
+:root {
+    --rine-light-red:       hsl(0,   100%, 80%);
+    --rine-light-orange:    hsl(30,  100%, 80%);
+    --rine-light-yellow:    hsl(60,  100%, 80%);
+    --rine-light-green:     hsl(120, 100%, 80%);
+    --rine-light-cyan:      hsl(180, 100%, 80%);
+    --rine-light-blue:      hsl(240, 100%, 80%);
+    --rine-light-blue-p10:  hsl(250, 100%, 80%);
+    --rine-light-blue-p20:  hsl(260, 100%, 80%);
+    --rine-light-purple:    hsl(270, 100%, 80%);
+    --rine-light-purple-p10:hsl(280, 100%, 80%);
+    --rine-light-purple-p20:hsl(290, 100%, 80%);
+    --rine-light-magenta:   hsl(300, 100%, 80%);
+
+    --rine-medium-red:      hsl(0,   25%, 50%);
+    --rine-medium-orange:   hsl(30,  25%, 50%);
+    --rine-medium-yellow:   hsl(60,  25%, 50%);
+    --rine-medium-green:    hsl(120, 25%, 50%);
+    --rine-medium-cyan:     hsl(180, 25%, 50%);
+    --rine-medium-blue:     hsl(240, 25%, 50%);
+    --rine-medium-purple:   hsl(270, 25%, 50%);
+    --rine-medium-magenta:  hsl(300, 25%, 50%);
+
+    --rine-dark-red:        hsl(0,   25%, 10%);
+    --rine-dark-orange:     hsl(30,  25%, 10%);
+    --rine-dark-yellow:     hsl(60,  25%, 10%);
+    --rine-dark-green:      hsl(120, 25%, 10%);
+    --rine-dark-cyan:       hsl(180, 25%, 10%);
+    --rine-dark-blue:       hsl(240, 25%, 10%);
+    --rine-dark-purple:     hsl(270, 25%, 10%);
+    --rine-dark-magenta:    hsl(300, 25%, 10%);
+
+    --rine-white:           #eee;
+    --rine-shadow:          0.5rem 0.5rem 0.5rem black;
+}
+
+/* foreground */
+.rine-light-red {
+    color: var(--rine-light-red);
+}
+
+.rine-light-blue {
+    color: var( --rine-light-blue);
+}
+
+.rine-light-blue-p10 {
+    color: var( --rine-light-blue-p10);
+}
+
+.rine-light-blue-p20 {
+    color: var( --rine-light-blue-p20);
+}
+
+.rine-light-purple {
+    color: var(--rine-light-purple);
+}
+
+.rine-light-purple-p10 {
+    color: var(--rine-light-purple-p10);
+}
+
+.rine-light-purple-p20 {
+    color: var(--rine-light-purple-p20);
+}
+
+.rine-light-magenta {
+    color: var(--rine-light-magenta);
+}
+
+/* background */
+.rine-dark-blue-background {
+    background-color: var(--rine-dark-blue);
+}
+
+.rine-dark-purple-background {
+    background-color: var(--rine-dark-purple);
+}
+
+.rine-dark-magenta-background {
+    background-color: var(--rine-dark-magenta);
+}

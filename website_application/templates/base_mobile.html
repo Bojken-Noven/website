@@ -16,27 +16,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	<head>
 	<body>
-		<div class="nav-bar-container flex-center-container">
-			<nav class="nav-bar">
-				<p class="nav-bar-item nav-bar-item-left">
+		<div class="mobile-nav-bar-container flex-center-container">
+			<nav class="mobile-nav-bar">
+				<p class="mobile-nav-bar-item mobile-nav-bar-item-left">
 					<span class="rine-light-blue">R</span><span class="rine-light-blue-p10">i</span><span class="rine-light-blue-p20">n</span><span class="rine-light-purple">e</span>
 					<span class="rine-light-purple">F</span><span class="rine-light-purple-p10">i</span><span class="rine-light-purple-p20">l</span><span class="rine-light-magenta">p</span>
 				</p>
 				{% if request.path == "/" %}
-					<p class="nav-bar-item nav-bar-active-item"><a href="/">Home</a></p>
+					<p class="mobile-nav-bar-item nav-bar-active-item"><a href="/">Home</a></p>
 				{% else %}
-					<p class="nav-bar-item"><a href="/">Home</a></p>
+					<p class="mobile-nav-bar-item"><a href="/">Home</a></p>
 				{% endif %}
-				<p class="nav-bar-item"><a href="{% url 'resume' %}" target="_blank">Resume</a></p>
-				<p class="nav-bar-item"><a href="https://github.com/Bojken-Noven/website" target="_blank">Source Code</a></p>
+				<p class="mobile-nav-bar-item"><a href="{% url 'resume' %}" target="_blank">Resume</a></p>
+				<p class="mobile-nav-bar-item"><a href="https://github.com/Bojken-Noven/website" target="_blank">Source Code</a></p>
 				{% if not user.is_authenticated %}
-					<p class="nav-bar-item nav-bar-item-right"><a href="{% url 'login' %}" target="_blank">Admin</a></p>
+					<p class="mobile-nav-bar-item mobile-nav-bar-item-right"><a href="{% url 'login' %}" target="_blank">Admin</a></p>
 				{% else %}
-					<p class="nav-bar-item nav-bar-item-right"><a href="{% url 'admin:index' %}">Admin</a></p>
+					<p class="mobile-nav-bar-item mobile-nav-bar-item-right"><a href="{% url 'admin:index' %}">Admin</a></p>
 				{% endif %}
 			</nav>
 		</div>
-		<div class="main-container flex-center-container">
+		<div class="mobile-main-container flex-center-container">
 			{% block content %}
 			{% endblock %}
 		</div>
