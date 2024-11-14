@@ -1,0 +1,15 @@
+.post-container {
+    padding-top: 4vw;
+    width: 30%;
+}
+
+.mobile-post-container {
+    padding-bottom: 5vw;
+    padding-top: 5vw;
+    width: 90vw;
+}
+
+.post-text-category {
+    font-weight: bold;
+}
+

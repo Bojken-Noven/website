@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div class="index-side-container index-left-container">
+		<ul class="index-left-videos-container">
+			{% for video in videos %}
+				<li class="index-left-video-container"><iframe src="https://www.youtube-nocookie.com/embed/{{ video.video_id }}" frameBorder="0"></iframe></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="index-center-container flex-center-container">
+		<ul class="index-posts-container">
+			<li class="index-posts-heading-container">
+				<h1>Latest Posts</h1>
+			</li>
+			{% for post in posts %}
+				<li class="index-post-container {% if post.category == 'Technology' %}rine-dark-blue-background{% elif post.category == 'Music' %}rine-dark-purple-background{% elif post.category == 'Gaming' %}rine-dark-magenta-background{% endif %}">
+					<div class="index-post-image-container">
+						<a href="{% url 'post' post.pk %}"><img class="index-post-image" src="{{ post.image.url }}"/></a>
+					</div>
+					<div class="index-post-text-container">
+						<h2><a href="{% url 'post' post.pk %}">{{ post.title }}</a></h2>
+						<p class="index-post-text-metadata"><br>
+							{{ post.date }} - 
+							{% if post.category == "Technology" %}
+								<span class="index-post-text-category rine-light-blue">{{ post.category }}</span>
+							{% elif post.category == "Music" %}
+								<span class="index-post-text-category rine-light-purple">{{ post.category }}</span>
+							{% elif post.category == "Gaming" %}
+								<span class="index-post-text-category rine-light-magenta">{{ post.category }}</span>
+							{% endif %}
+						</p>
+						<div class="index-post-text-excerpt-container">
+							<br>{{ post.body | safe | truncatewords:24}}
+						</div>		
+						<p class="index-post-text-read-more"><a href="{% url 'post' post.pk %}">READ MORE »</a></p>
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="index-side-container index-right-container">
+		<div class="index-right-about-container">
+			{{ right_side_bar_content.body | safe}}
+		</div>
+	</div>
+{% endblock %}

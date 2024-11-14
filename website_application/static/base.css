@@ -1,0 +1,92 @@
+/* generic */
+.flex-center-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.fixed-center-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* navigation bar */
+.nav-bar-container, .mobile-nav-bar-container {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.nav-bar-container {
+    min-height: 4rem;
+    top: 0;
+}
+
+.mobile-nav-bar-container {
+    min-height: 3rem;
+    bottom: 0;
+}
+
+.nav-bar, .mobile-nav-bar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr 0fr 0fr 0fr 2fr;
+    place-items: center;
+    width: 100%;
+}
+
+.nav-bar {
+    grid-gap: 4rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.mobile-nav-bar {
+    grid-gap: 5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.nav-bar-item, .mobile-nav-bar-item {
+    white-space: nowrap;
+}
+
+.nav-bar-item {
+    font-size: 1.5rem;
+}
+
+.mobile-nav-bar-item {
+    font-size: 4vw;
+}
+
+.nav-bar-item-left, .mobile-nav-bar-item-left, .nav-bar-active-item {
+    font-weight: bold;
+}
+
+.nav-bar-item-left, .mobile-nav-bar-item-left {
+    justify-self: left;
+}
+
+.mobile-nav-bar-item-left, .mobile-nav-bar-item-right {
+    font-size: 3vw;
+}
+
+.nav-bar-item-right, .mobile-nav-bar-item-right {
+    justify-self: right;
+}
+
+/* main container */
+.main-container, .mobile-main-container {
+    flex-direction: column;
+}
+
+.main-container {
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+
+.mobile-main-container {
+    margin-bottom: 3rem;
+}

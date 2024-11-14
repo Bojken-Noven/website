@@ -1,0 +1,19 @@
+{% extends "base_mobile.html" %}
+
+{% block content %}
+	<div class="mobile-post-container">
+		<h2>{{ post.title }}</h2>
+		<p><br>
+			{{ post.date }} - 
+			{% if post.category == "Technology" %}
+				<span class="post-text-category rine-light-blue">{{ post.category }}</span>
+			{% elif post.category == "Music" %}
+				<span class="post-text-category rine-light-purple">{{ post.category }}</span>
+			{% elif post.category == "Gaming" %}
+				<span class="post-text-category rine-light-magenta">{{ post.category }}</span>
+			{% endif %}
+			<br><br>
+		</p>
+		<p>{{ post.body | safe }}</p>
+	</div>
+{% endblock %}
